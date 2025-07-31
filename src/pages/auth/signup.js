@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import Link from 'next/link';
 
 export default function Signup() {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
@@ -107,12 +108,12 @@ export default function Signup() {
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Already have an account?{' '}
-              <a 
-                href="/auth/login" 
+              <Link
+                href="/auth/login"
                 className="text-blue-600 font-semibold hover:text-blue-700 hover:underline transition-colors duration-200"
               >
                 Sign in
-              </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -121,9 +122,9 @@ export default function Signup() {
         <div className="text-center mt-8">
           <p className="text-sm text-gray-500">
             By creating an account, you agree to our{' '}
-            <a href="#" className="text-blue-600 hover:underline">Terms of Service</a>
+            <Link href="#" className="text-blue-600 hover:underline">Terms of Service</Link>
             {' '}and{' '}
-            <a href="#" className="text-blue-600 hover:underline">Privacy Policy</a>
+            <Link href="#" className="text-blue-600 hover:underline">Privacy Policy</Link>
           </p>
         </div>
       </div>
